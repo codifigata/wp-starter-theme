@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksage=self.webpackChunksage||[]).push([[189],{784:(e,o,t)=>{var s=t(575);const l=window.wp.blocks;const n=e=>{e&&console.error(e),(0,l.unregisterBlockStyle)("core/button","outline"),(0,l.registerBlockStyle)("core/button",{name:"outline",label:"Outline"})};(0,s.Z)(n)},576:()=>{}},e=>{var o=o=>e(e.s=o);e.O(0,[575],(()=>(o(784),o(576)))),e.O()}]);
