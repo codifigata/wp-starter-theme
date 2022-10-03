@@ -1,137 +1,68 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
-</p>
 
-<p align="center">
-  <a href="LICENSE.md">
-    <img alt="MIT License" src="https://img.shields.io/github/license/roots/sage?color=%23525ddc&style=flat-square" />
-  </a>
+# WordPress Starter Theme
 
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist" src="https://img.shields.io/packagist/v/roots/sage.svg?style=flat-square" />
-  </a>
+Sviluppa il tuo prossimo tema WordPress con uno stack moderno!
 
-  <a href="https://github.com/roots/sage/actions">
-    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/roots/sage/Main?style=flat-square" />
-  </a>
+Scrivi codice utilizzando Blade (il template engine di Laravel), rendi interattive le tue pagine utilizzando Alpine.js e stilizza il front-office alla grande con TailwindCSS.
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2" />
-  </a>
-</p>
+Cosa potresti volere di più? 🤷🏻‍♂️
+## Installazione
 
-<p align="center">
-  <strong>WordPress starter theme with Laravel Blade components and templates, Tailwind CSS, and a modern development workflow</strong>
-</p>
+Scarica in locale il repository e carica i file nella directory "wp-content" della tua installazione WordPress.
 
-<p align="center">
-  <a href="https://roots.io/"><strong><code>Website</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/sage/10.x/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
-</p>
+**Importante:** prima di attivare il tema, scarica installa e attiva il plugin [Acorn](https://github.com/roots/acorn/releases/tag/v2.1.2) in base alla versione di PHP in uso sul tuo server.
+Acorn è la componente che permette l'utilizzo di Blade, perciò in sua assenza, il tema non funzionerà.
+## Requisiti
 
-## Sponsors
+Per sviluppare il tuo tema avrai bisogno che le seguenti tecnologie siano installate e funzionanti nella tua macchina:
 
-**Sage** is an open source project and completely free to use.
+- PHP 7.4+
+- Composer
+- Node.js (meglio se in versione LTS)
+## Come iniziare a viluppare
 
-However, the amount of effort needed to maintain and develop new features and products within the Roots ecosystem is not sustainable without proper financial backing. If you have the capability, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+Dopo aver installato il tema, il workflow da seguire è il seguente:
 
-<p align="center"><a href="https://github.com/sponsors/roots"><img height="32" src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=" alt="Sponsor Roots"></a></p>
-
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="148" height="111"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="148" height="111"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="148" height="111"></a> <a href="https://icons8.com/"><img src="https://cdn.roots.io/app/uploads/icons8.svg" alt="Icons8" width="148" height="111"></a>
-
-<a href="https://generodigital.com/"><img src="https://cdn.roots.io/app/uploads/genero.svg" alt="Genero" width="148" height="111"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="148" height="111"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="148" height="111"></a>
-</div>
+1. Lanciare da teminale il comando ``composer install`` per installare le dipendenze di Composer
+2. Lanciare il comando da teminale ``npm install`` oppure ``yarn`` per installare le dipendenze di Node.js
+3. Avviare la compilazione degli assets con il comando ``npm run dev`` oppure ``yarn run dev``
 
 
-## Features
+A questo punto non ti resta che... scrivere codice!
+Esplora la directory, modifica i file per creare il tuo personale layout e quando sei pronto, vai alla sezione "Deploy".
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn).
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade).
-- Lightning fast frontend development workflow powered by [Bud](https://bud.js.org/).
-- Out of the box support for [Tailwind CSS](https://tailwindcss.com/).
 
-## Requirements
+## Deploy
 
-Make sure all dependencies have been installed before moving on:
+Okay, ci siamo, hai creato un tema fighissimo e adesso devi andare online.
 
-- [Acorn](https://docs.roots.io/acorn/2.x/installation/) v2
-- [WordPress](https://wordpress.org/) >= 5.9
-- [PHP](https://secure.php.net/manual/en/install.php) >= 7.4.0 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
-- [Composer](https://getcomposer.org/download/)
-- [Node.js](http://nodejs.org/) >= 16
-- [Yarn](https://yarnpkg.com/en/docs/install)
+Come fare?
 
-## Theme installation
+Ecco come:
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
+1. Compila gli assets lanciando il comando da teminale: ``npm run build`` oppure ``yarn run build``
+2. Compatta la cartella del tuo tema e caricala sul server remoto, dentro la cartella "wp-themes"
+3. Accedi al teminale del server remoto e lancia il comando ``composer install --no-dev``
 
-```sh
-# @ app/themes/ or wp-content/themes/
-$ composer create-project roots/sage your-theme-name
-```
+Fatto! 🚀
 
-To install the latest development version of Sage, add `dev-main` to the end of the command:
+**Nota bene:** quando crei lo zip del tuo tema per caricarlo sul server, devi escludere le due cartelle ``vendor`` e ``node_modules`` come farebbe un bravo web developer!
+## Documentazione
+Questo tema starter utilizza cinque principali tecnologie:
+- [Sage](https://docs.roots.io/sage/10.x/structure/#introduction)
+- [Acorn](https://docs.roots.io/acorn/2.x/installation/#installing-acorn-as-a-plugin)
+- [TailwindCSS](https://tailwindcss.com/docs/configuration)
+- [AlpineJS](https://alpinejs.dev/start-here)
+- [Bud](https://bud.js.org/docs/)
 
-```sh
-$ composer create-project roots/sage your-theme-name dev-main
-```
+Clicca sui rispettivi link per leggere la documentazione, in caso di dubbi.
 
-Make sure that you have [Acorn installed](https://docs.roots.io/acorn/2.x/installation/).
 
-## Theme structure
 
-```sh
-themes/your-theme-name/   # → Root of your Sage based theme
-├── app/                  # → Theme PHP
-│   ├── Providers/        # → Service providers
-│   ├── View/             # → View models
-│   ├── filters.php       # → Theme filters
-│   └── setup.php         # → Theme setup
-├── composer.json         # → Autoloading for `app/` files
-├── public/               # → Built theme assets (never edit)
-├── functions.php         # → Theme bootloader
-├── index.php             # → Theme template wrapper
-├── node_modules/         # → Node.js packages (never edit)
-├── package.json          # → Node.js dependencies and scripts
-├── resources/            # → Theme assets and templates
-│   ├── fonts/            # → Theme fonts
-│   ├── images/           # → Theme images
-│   ├── scripts/          # → Theme javascript
-│   ├── styles/           # → Theme stylesheets
-│   └── views/            # → Theme templates
-│       ├── components/   # → Component templates
-│       ├── forms/        # → Form templates
-│       ├── layouts/      # → Base templates
-│       ├── partials/     # → Partial templates
-        └── sections/     # → Section templates
-├── screenshot.png        # → Theme screenshot for WP admin
-├── style.css             # → Theme meta information
-├── vendor/               # → Composer packages (never edit)
-└── bud.config.js         # → Bud configuration
-```
+## Disclaimer
 
-## Theme setup
+Questo Starter Theme è completamente modellabile e personalizzabile, non ti sto servendo un tema già pronto con cui andare online ma un punto di partenza per sviluppare agevolmente le tue grafiche personalizzate.
 
-Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
+Quando installerai e proverai il template noterai infatti che il CSS incluso è veramente poco, giusto quanto basta per non farti dire "E ora? Da dove comincio?!"
 
-## Theme development
-
-- Run `yarn` from the theme directory to install dependencies
-- Update `bud.config.js` with your local dev URL
-
-### Build commands
-
-- `yarn dev` — Compile assets when file changes are made, start Browsersync session
-- `yarn build` — Compile assets for production
-
-## Community
-
-Keep track of development and community news.
-
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on the [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+Infine, ho incluso anche un template Header di [TailwindBriks](https://tailwindbricks.com/), la libreria di compoenenti TailwindCSS che sto sviluppando e che rilascerò nei prossimi mesi.
